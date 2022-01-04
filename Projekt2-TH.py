@@ -52,10 +52,12 @@ def vyhodnot_hru(zadane: int, tajne: int):
     #             bull += 1
 
     for i in range(4):
-        if tajne[i] == zadane[i]:
+        if str(tajne)[i] == str(zadane)[i]:
             cow += 1
-        if zadane[i] in tajne:
+        if str(zadane)[i] in str(tajne) and str(tajne)[i] != str(zadane)[i]:
             bull += 1
+
+    print(f"{cow} cow + {bull} bull")
     # # Výpis uhodlých císel se stejnou pozici
     # if bull > 1:
     #     print(bull, "bulls")
