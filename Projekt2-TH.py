@@ -43,18 +43,27 @@ def vyhodnot_hru(zadane: int, tajne: int):
     # if zadane == tajne:
     #     print("Vyhrál si")
     bull = 0
-    for i, prvek in enumerate(str(zadane)):
-        for x, cislo in enumerate(str(tajne)):
-            if (i, prvek) == (x, cislo):
-                bull += 1
+    cow = 0
 
-    # Výpis uhodlých císel se stejnou pozici
-    if bull > 1:
-        print(bull, "bulls")
-    elif bull == 0:
-        pass
-    else:
-        print(bull, "bull")
+    # Tohle nize funguje na bull
+    # for i, prvek in enumerate(str(zadane)):
+    #     for x, cislo in enumerate(str(tajne)):
+    #         if (i, prvek) == (x, cislo):
+    #             bull += 1
+
+    for i in range(4):
+        if tajne[i] == zadane[i]:
+            cow += 1
+        if zadane[i] in tajne:
+            bull += 1
+    # # Výpis uhodlých císel se stejnou pozici
+    # if bull > 1:
+    #     print(bull, "bulls")
+    # elif bull == 0:
+    #     pass
+    # else:
+    #     print(bull, "bull")
+
 
 
 def generovani_tajneho_cisla():
