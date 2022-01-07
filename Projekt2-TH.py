@@ -14,7 +14,7 @@ def spustit_hru():
             break
     print(f"Vyhral jsi")
     print(f"Pocet pokusu {pokusy}")
-    print(tajne_cislo)
+    # print(tajne_cislo)
 
 # Vygeneruje pzodrav uzivatele
 def pozdravit_uzivatele() -> str:
